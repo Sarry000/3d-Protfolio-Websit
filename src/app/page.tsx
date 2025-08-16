@@ -2,7 +2,6 @@ import { Header } from '@/components/header';
 import { Hero } from '@/components/sections/hero';
 import { About } from '@/components/sections/about';
 import { Projects } from '@/components/sections/projects';
-import { Testimonials } from '@/components/sections/testimonials';
 import { Contact } from '@/components/sections/contact';
 import { Footer } from '@/components/footer';
 import { Gallery } from '@/components/sections/gallery';
@@ -18,7 +17,6 @@ export default function Home() {
           <div className="light-spot top-[20%] right-[-10%]" />
           <About />
           <Projects />
-          <Testimonials />
           <Gallery />
           <Contact />
         </div>
