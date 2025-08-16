@@ -8,7 +8,7 @@ export const navLinks = [
 
 export const projects = [
   {
-    title: 'Project Alpha',
+    title: 'Rocket Booster',
     description: 'A cutting-edge web application built with Next.js and TypeScript, featuring a highly interactive 3D interface using Spline. This project pushed the boundaries of web-based user experiences.',
     techStack: ['Next.js', 'TypeScript', 'Spline', 'Tailwind CSS'],
     imageUrl: 'https://placehold.co/800x600.png',
