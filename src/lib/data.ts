@@ -25,7 +25,7 @@ export const projects = [
     link: 'https://github.com/Sarry000/Maze-Ball',
   },
     {
-    title: 'Project Gamma',
+    title: 'AI Voice Interviewer with n8n',
     description: 'A mobile-first social media application with real-time chat functionality powered by Firebase. The UI was crafted to be intuitive and engaging for a broad user base.',
     techStack: ['React Native', 'Firebase', 'GraphQL', 'Figma'],
     imageUrl: 'https://placehold.co/800x600.png',
