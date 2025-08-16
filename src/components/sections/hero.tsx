@@ -3,7 +3,7 @@ export function Hero() {
     <section id="home" className="h-screen w-full">
       <div className="absolute inset-0 z-0">
          <iframe 
-            src='https://my.spline.design/nexbotrobotcharacterconcept-1a892705b7662c64de8582d1c67e8910/' 
+            src='https://my.spline.design/nexbotrobotcharacterconcept-8YIJtt5hQ3zIUjbhvSbNsUwq/' 
             frameBorder='0' 
             width='100%' 
             height='100%'
