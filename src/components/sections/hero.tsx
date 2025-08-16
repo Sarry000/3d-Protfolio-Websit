@@ -6,7 +6,7 @@ import Link from 'next/link';
 export function Hero() {
   return (
     <section id="home" className="relative h-screen w-full">
-      <div className="sticky top-0 h-screen w-full">
+      <div className="absolute inset-0">
         <iframe
           src='https://my.spline.design/nexbotrobotcharacterconcept-8YIJtt5hQ3zIUjbhvSbNsUwq/'
           frameBorder='0'
