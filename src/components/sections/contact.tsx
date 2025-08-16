@@ -22,7 +22,7 @@ const formSchema = z.object({
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/Sarry000", name: "GitHub" },
-  { icon: Linkedin, href: "#", name: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/sarthak-bukane-958154229", name: "LinkedIn" },
   { icon: Twitter, href: "#", name: "Twitter" },
 ];
 
