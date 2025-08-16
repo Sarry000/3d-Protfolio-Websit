@@ -14,7 +14,7 @@ export const projects = [
     description: 'A multi-level game developed in the Unity Engine. I implemented C# scripts for rocket movement, boosting mechanics, and level progression. This project showcases skills in game physics, level design, and integrating various assets to enhance the user experience.',
     techStack: ['Unity', 'C#', 'Game Physics', 'Level Design'],
     imageUrl: 'https://placehold.co/800x600.png',
-    aiHint: 'abstract technology',
+    imageUrl: '/Rocket-Booster.gif',
     links: [
       {
         name: 'GitHub',
@@ -34,6 +34,7 @@ export const projects = [
     techStack: ['Unity', 'C#', 'Physics', 'Level Design'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'futuristic dashboard',
+    imageUrl: '/Maze.gif',
     links: [
       {
         name: 'View Project',
@@ -46,8 +47,7 @@ export const projects = [
     title: 'AI Voice Interviewer with n8n',
     description: 'A self-hostable AI agent using an n8n workflow, Google Gemini, and browser-based Speech-to-Text for realistic interview practice.',
     techStack: ['n8n', 'Google Gemini', 'AI', 'Voice Recognition'],
-    imageUrl: 'https://placehold.co/800x600.png',
-    aiHint: 'modern application',
+    imageUrl: '/Voice.png',
     links: [
         {
             name: 'GitHub',
@@ -66,7 +66,6 @@ export const projects = [
     description: 'This workflow automates the process of summarizing Telegram group chat messages using AI. It fetches messages, generates concise summaries with Google Gemini, and sends them to a designated chat, keeping you updated without information overload.',
     techStack: ['n8n', 'Google Gemini', 'Telegram API', 'Automation'],
     imageUrl: 'https://placehold.co/800x600.png',
-    aiHint: 'chat summary',
     links: [
       {
         name: 'View on GitHub',
