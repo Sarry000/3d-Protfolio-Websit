@@ -14,7 +14,7 @@ export const projects = [
     techStack: ['Unity', 'C#', 'Game Physics', 'Level Design'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'abstract technology',
-    link: '#',
+    link: 'https://github.com/Sarry000/rocket-booster',
   },
   {
     title: 'Project Beta',
@@ -31,37 +31,6 @@ export const projects = [
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'modern application',
     link: '#',
-  },
-];
-
-export const testimonials = [
-  {
-    name: 'Jane Doe',
-    title: 'CEO, Innovate Inc.',
-    review: "Sarthak's work is exceptional. He delivered a high-quality product on time and was a pleasure to work with. His technical skills and creativity are top-notch.",
-    imageUrl: 'https://placehold.co/100x100.png',
-    aiHint: 'professional portrait',
-  },
-  {
-    name: 'John Smith',
-    title: 'CTO, Tech Solutions',
-    review: 'The 3D integration Sarthak implemented was a game-changer for our platform. His problem-solving abilities are remarkable. Highly recommended developer.',
-    imageUrl: 'https://placehold.co/100x100.png',
-    aiHint: 'corporate headshot',
-  },
-  {
-    name: 'Emily White',
-    title: 'Product Manager, Creative Co.',
-    review: 'Working with Sarthak was a fantastic experience. He has a great eye for design and user experience, which brought our vision to life beautifully.',
-    imageUrl: 'https://placehold.co/100x100.png',
-    aiHint: 'creative professional',
-  },
-   {
-    name: 'Michael Brown',
-    title: 'Lead Engineer, Future Systems',
-    review: 'Sarthak is a very skilled developer. He single-handedly improved our frontend performance by 40%. A true asset to any team.',
-    imageUrl: 'https://placehold.co/100x100.png',
-    aiHint: 'software engineer',
   },
 ];
 
