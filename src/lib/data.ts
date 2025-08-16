@@ -61,6 +61,20 @@ export const projects = [
         }
     ],
   },
+  {
+    title: 'AI Telegram Group-Chat Summarizer (n8n)',
+    description: 'This workflow automates the process of summarizing Telegram group chat messages using AI. It fetches messages, generates concise summaries with Google Gemini, and sends them to a designated chat, keeping you updated without information overload.',
+    techStack: ['n8n', 'Google Gemini', 'Telegram API', 'Automation'],
+    imageUrl: 'https://placehold.co/800x600.png',
+    aiHint: 'chat summary',
+    links: [
+      {
+        name: 'View on GitHub',
+        href: '#',
+        icon: Github
+      }
+    ]
+  }
 ];
 
 export const galleryImages = [
