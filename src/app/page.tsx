@@ -4,7 +4,7 @@ import { About } from '@/components/sections/about';
 import { Projects } from '@/components/sections/projects';
 import { Contact } from '@/components/sections/contact';
 import { Footer } from '@/components/footer';
-import { Gallery } from '@/components/sections/gallery';
+import { Skills } from '@/components/sections/skills';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
           <div className="light-spot top-[20%] right-[-10%]" />
           <About />
           <Projects />
-          <Gallery />
+          <Skills />
           <Contact />
         </div>
       </main>      <Footer />

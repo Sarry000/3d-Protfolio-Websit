@@ -2,10 +2,9 @@
 import { Github, ExternalLink } from "lucide-react";
 
 export const navLinks = [
-  { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Gallery', href: '#gallery' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -75,11 +74,43 @@ export const projects = [
   }
 ];
 
-export const galleryImages = [
-  { src: 'https://placehold.co/600x401.png', alt: 'AI Gaming Concept 1', hint: 'AI gaming' },
-  { src: 'https://placehold.co/600x402.png', alt: 'AI Gaming Concept 2', hint: '3d robot' },
-  { src: 'https://placehold.co/600x403.png', alt: 'AI Gaming Concept 3', hint: 'virtual reality' },
-  { src: 'https://placehold.co/600x404.png', alt: 'AI Gaming Concept 4', hint: 'futuristic game' },
-  { src: 'https://placehold.co/600x405.png', alt: 'AI Gaming Concept 5', hint: 'cyborg player' },
-  { src: 'https://placehold.co/600x406.png', alt: 'AI Gaming Concept 6', hint: 'holographic interface' },
-];
+export const skillsData = {
+  programmingLanguages: [
+    { name: 'Python', level: 90 },
+    { name: 'JavaScript', level: 85 },
+    { name: 'C#', level: 80 },
+    { name: 'HTML', level: 85 },
+    { name: 'CSS', level: 85 },
+    { name: 'SQL', level: 75 },
+  ],
+  technologiesFrameworks: [
+    { name: 'Unity Engine', level: 85 },
+    { name: 'MySQL', level: 80 },
+    { name: 'React (Basics)', level: 60 },
+    { name: 'Game Development', level: 85 },
+    { name: 'Web Technologies', level: 80 },
+    { name: 'AI/ML Basics', level: 70 },
+  ],
+  toolsOthers: [
+    { name: 'Git', level: 90 },
+    { name: 'GitHub', level: 90 },
+    { name: 'N8N', level: 80 },
+    { name: 'Problem Solving', level: 85 },
+    { name: 'Communication', level: 80 },
+    { name: 'Time Management', level: 85 },
+  ],
+  additionalTechnologies: [
+    'Game Physics',
+    'n8n Workflows',
+    'Google Gemini LLM',
+    'Speech-to-Text APIs',
+    'Data Structures',
+    'Algorithms',
+    'Critical Thinking',
+    'Adaptability',
+    'Team Collaboration',
+    'Project Management',
+    'Version Control',
+    'Automation',
+  ],
+};
