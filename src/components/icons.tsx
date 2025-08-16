@@ -55,4 +55,10 @@ export const Ai = (props: SVGProps<SVGSVGElement>) => (
     <circle cx="12" cy="12" r="2.5" fill="currentColor"/>
   </svg>
 );
+
+export const Gravatar = (props: SVGProps<SVGSVGElement>) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" {...props}>
+    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm6 15h-3.5c-1.25 0-2.42-.63-3.13-1.69l-.21-.31c-.37-.55-.56-1.2-.56-1.88v-.25c0-1.04.85-1.88 1.88-1.88h4.62v-1.5H12c-2.38 0-4.5-1.71-4.95-4H12v1.5H8.38c.5-2.29 2.62-4 4.12-4s3.5.75 3.5 2.5a2.5 2.5 0 0 1-2.5 2.5h-1c-.28 0-.5.22-.5.5v.25c0 .28.22.5.5.5h4.63c1.25 0 2.42.63 3.13 1.69l.21.31c.37.55.56 1.2.56 1.88V15c0 1.04-.85 1.88-1.88 1.88H18v-1.5h.13c.28 0 .5-.22.5-.5V15z"/>
+  </svg>
+);
     
