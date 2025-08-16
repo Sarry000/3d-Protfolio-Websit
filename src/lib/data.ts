@@ -17,9 +17,14 @@ export const projects = [
     aiHint: 'abstract technology',
     links: [
       {
-        name: 'View Project',
+        name: 'GitHub',
         href: 'https://github.com/Sarry000/rocket-booster',
         icon: Github
+      },
+      {
+        name: 'Play on Itch.io',
+        href: 'https://sarry007.itch.io/rocket-boster',
+        icon: ExternalLink
       }
     ],
   },
