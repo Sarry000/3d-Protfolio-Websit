@@ -2,7 +2,13 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-export function useInView<T extends HTMLElement>() {
+type IntersectionObserverOptions = {
+  threshold?: number | number[];
+  root?: Element | null;
+  rootMargin?: string;
+};
+
+export function useInView<T extends HTMLElement>(options: IntersectionObserverOptions = {}) {
   const ref = useRef<T>(null);
   const [inView, setInView] = useState(false);
 
@@ -19,6 +25,7 @@ export function useInView<T extends HTMLElement>() {
       },
       {
         threshold: 0.1,
+        ...options,
       }
     );
 
@@ -29,7 +36,7 @@ export function useInView<T extends HTMLElement>() {
         observer.unobserve(element);
       }
     };
-  }, []);
+  }, [options.threshold, options.root, options.rootMargin]);
 
   return { ref, inView };
 }

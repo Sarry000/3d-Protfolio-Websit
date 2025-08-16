@@ -22,10 +22,10 @@ export function Hero() {
             Full Stack Developer & 3D Designer
           </p>
           <div className="mt-8 flex gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="glow-shadow hover:glow-shadow-lg">
               <Link href="#projects">View My Work</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="glassmorphism glow-shadow hover:glow-shadow-lg hover:bg-primary/10">
               <Link href="#contact">Contact Me</Link>
             </Button>
           </div>

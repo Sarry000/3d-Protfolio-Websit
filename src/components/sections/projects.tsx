@@ -10,19 +10,22 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
-  const { ref, inView } = useInView<HTMLDivElement>();
+  const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.2 });
   const isEven = index % 2 === 0;
 
   return (
     <div
       ref={ref}
-      data-in-view={inView}
-      className={cn(
-        "grid items-center gap-8 overflow-hidden rounded-lg md:grid-cols-2 md:gap-12",
-        isEven ? "fade-in-left" : "fade-in-right"
-      )}
+      className="grid items-center gap-8 overflow-hidden md:grid-cols-2 md:gap-12"
     >
-      <div className={cn("relative h-80 w-full md:h-full", isEven ? "md:order-last" : "")}>
+      <div 
+        data-in-view={inView}
+        className={cn(
+          "relative h-80 w-full md:h-full", 
+          isEven ? "md:order-last fade-in-left" : "fade-in-right"
+        )}
+        style={{ transitionDelay: '100ms' }}
+      >
         <Image
           src={project.imageUrl}
           alt={project.title}
@@ -32,7 +35,11 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
       </div>
-      <div className="space-y-4">
+      <div 
+        data-in-view={inView}
+        className={cn("space-y-4", isEven ? "fade-in-right" : "fade-in-left")}
+        style={{ transitionDelay: '300ms' }}
+      >
         <h3 className="text-2xl font-bold text-glow md:text-3xl">{project.title}</h3>
         <p className="text-muted-foreground">{project.description}</p>
         <div className="flex flex-wrap gap-2">
@@ -54,10 +61,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
 }
 
 export function Projects() {
+  const { ref, inView } = useInView<HTMLDivElement>();
+
   return (
-    <section id="projects" className="py-24 sm:py-32">
+    <section id="projects" ref={ref} className="py-24 sm:py-32">
       <div className="container mx-auto space-y-16 px-4 md:px-6">
-        <div className="text-center">
+        <div data-in-view={inView} className="fade-in-up text-center">
           <h2 className="text-3xl font-bold tracking-tighter text-glow sm:text-4xl md:text-5xl">
             Featured Projects
           </h2>
@@ -65,7 +74,7 @@ export function Projects() {
             A selection of my work, showcasing my skills in creating modern web experiences.
           </p>
         </div>
-        <div className="space-y-16">
+        <div className="space-y-24">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}

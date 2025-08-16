@@ -27,7 +27,7 @@ const socialLinks = [
 ];
 
 export function Contact() {
-  const { ref, inView } = useInView<HTMLElement>();
+  const { ref, inView } = useInView<HTMLElement>({ threshold: 0.1 });
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -41,6 +41,7 @@ export function Contact() {
     await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate API call
     console.log(values);
     toast({
+      variant: 'default',
       title: "Message Sent!",
       description: "Thanks for reaching out. I'll get back to you soon.",
     });
@@ -101,7 +102,7 @@ export function Contact() {
                       <FormItem>
                         <FormLabel className="text-primary">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="your.email@example.com" {...field} />
+                          <Input type="email" placeholder="your.email@example.com" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
