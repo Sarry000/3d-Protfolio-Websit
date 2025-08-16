@@ -12,7 +12,7 @@ export function Hero() {
           src="https://placehold.co/1200x800.png"
           alt="3D robot character"
           fill
-          data-ai-hint="robot character"
+          data-ai-hint="spline 3d"
           className="object-cover"
           priority
         />
