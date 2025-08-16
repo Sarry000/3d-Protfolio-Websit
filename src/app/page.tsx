@@ -9,9 +9,9 @@ import { Footer } from '@/components/footer';
 
 export default function Home() {
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground flex flex-col items-center">
       <Header />
-      <main>
+      <main className="w-full">
         <Hero />
         <div className="relative z-10 bg-background">
           <div className="light-spot top-[-20%] left-[-10%]" />

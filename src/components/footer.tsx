@@ -3,7 +3,7 @@ import { navLinks } from '@/lib/data';
 
 export function Footer() {
   return (
-    <footer className="border-t border-primary/10 py-8">
+    <footer className="w-full border-t border-primary/10 py-8">
       <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 md:flex-row md:px-6">
         <div className="text-center md:text-left">
           <Link href="/" className="text-xl font-bold text-glow">
