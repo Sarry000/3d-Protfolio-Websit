@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
 
 function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.2 });
@@ -49,12 +48,16 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
             </Badge>
           ))}
         </div>
-        <Button asChild size="lg" className="group mt-4 glow-shadow transition-shadow hover:glow-shadow-lg">
-          <Link href={project.link}>
-            View Project
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </Button>
+        <div className="flex flex-wrap gap-4">
+          {project.links.map((link) => (
+            <Button key={link.href} asChild size="lg" className="group mt-4 glow-shadow transition-shadow hover:glow-shadow-lg">
+              <Link href={link.href} target="_blank">
+                <link.icon className="mr-2 h-4 w-4" />
+                {link.name}
+              </Link>
+            </Button>
+          ))}
+        </div>
       </div>
     </div>
   );

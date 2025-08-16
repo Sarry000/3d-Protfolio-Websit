@@ -1,3 +1,4 @@
+import { Github, ExternalLink } from "lucide-react";
 
 export const navLinks = [
   { name: 'Home', href: '#home' },
@@ -14,7 +15,13 @@ export const projects = [
     techStack: ['Unity', 'C#', 'Game Physics', 'Level Design'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'abstract technology',
-    link: 'https://github.com/Sarry000/rocket-booster',
+    links: [
+      {
+        name: 'View Project',
+        href: 'https://github.com/Sarry000/rocket-booster',
+        icon: Github
+      }
+    ],
   },
   {
     title: 'Maze-Ball',
@@ -22,7 +29,13 @@ export const projects = [
     techStack: ['Unity', 'C#', 'Physics', 'Level Design'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'futuristic dashboard',
-    link: 'https://github.com/Sarry000/Maze-Ball',
+    links: [
+      {
+        name: 'View Project',
+        href: 'https://github.com/Sarry000/Maze-Ball',
+        icon: Github
+      }
+    ],
   },
     {
     title: 'AI Voice Interviewer with n8n',
@@ -30,7 +43,18 @@ export const projects = [
     techStack: ['n8n', 'Google Gemini', 'AI', 'Voice Recognition'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'modern application',
-    link: 'https://github.com/Sarry000/ai-voice-interviewer',
+    links: [
+        {
+            name: 'GitHub',
+            href: 'https://github.com/Sarry000/ai-voice-interviewer',
+            icon: Github
+        },
+        {
+            name: 'Workflow',
+            href: 'https://n8n.io/workflows/6614-practice-job-interviews-with-voice-based-google-gemini-ai-interviewer/',
+            icon: ExternalLink
+        }
+    ],
   },
 ];
 
