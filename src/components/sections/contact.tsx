@@ -21,7 +21,7 @@ const formSchema = z.object({
 });
 
 const socialLinks = [
-  { icon: Github, href: "#", name: "GitHub" },
+  { icon: Github, href: "https://github.com/Sarry000", name: "GitHub" },
   { icon: Linkedin, href: "#", name: "LinkedIn" },
   { icon: Twitter, href: "#", name: "Twitter" },
 ];
