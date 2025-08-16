@@ -26,8 +26,8 @@ export const projects = [
   },
     {
     title: 'AI Voice Interviewer with n8n',
-    description: 'A mobile-first social media application with real-time chat functionality powered by Firebase. The UI was crafted to be intuitive and engaging for a broad user base.',
-    techStack: ['React Native', 'Firebase', 'GraphQL', 'Figma'],
+    description: 'A self-hostable AI agent using an n8n workflow, Google Gemini, and browser-based Speech-to-Text for realistic interview practice.',
+    techStack: ['n8n', 'Google Gemini', 'AI', 'Voice Recognition'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'modern application',
     link: '#',
