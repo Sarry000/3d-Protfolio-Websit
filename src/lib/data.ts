@@ -30,7 +30,7 @@ export const projects = [
     techStack: ['n8n', 'Google Gemini', 'AI', 'Voice Recognition'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'modern application',
-    link: '#',
+    link: 'https://github.com/Sarry000/ai-voice-interviewer',
   },
 ];
 
