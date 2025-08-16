@@ -2,20 +2,18 @@
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export function Hero() {
   return (
     <section id="home" className="relative h-screen w-full">
       <div className="sticky top-0 h-screen w-full">
-        <Image
-          src="https://placehold.co/1200x800.png"
-          alt="3D robot character"
-          fill
-          data-ai-hint="spline 3d"
-          className="object-cover"
-          priority
-        />
+        <iframe
+          src='https://my.spline.design/nexbotrobotcharacterconcept-8YIJtt5hQ3zIUjbhvSbNsUwq/'
+          frameBorder='0'
+          width='100%'
+          height='100%'
+          className='object-cover'
+        ></iframe>
         <div className="absolute inset-0 bg-background/60" />
       </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
