@@ -1,3 +1,4 @@
+
 export const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
@@ -9,8 +10,8 @@ export const navLinks = [
 export const projects = [
   {
     title: 'Rocket Booster',
-    description: 'A cutting-edge web application built with Next.js and TypeScript, featuring a highly interactive 3D interface using Spline. This project pushed the boundaries of web-based user experiences.',
-    techStack: ['Next.js', 'TypeScript', 'Spline', 'Tailwind CSS'],
+    description: 'A multi-level game developed in the Unity Engine. I implemented C# scripts for rocket movement, boosting mechanics, and level progression. This project showcases skills in game physics, level design, and integrating various assets to enhance the user experience.',
+    techStack: ['Unity', 'C#', 'Game Physics', 'Level Design'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'abstract technology',
     link: '#',
