@@ -22,7 +22,7 @@ export const projects = [
     techStack: ['Unity', 'C#', 'Physics', 'Level Design'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'futuristic dashboard',
-    link: '#',
+    link: 'https://github.com/Sarry000/Maze-Ball',
   },
     {
     title: 'Project Gamma',
