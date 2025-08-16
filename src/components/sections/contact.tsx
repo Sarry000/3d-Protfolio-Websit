@@ -13,7 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
 import { Github, Linkedin } from "lucide-react";
-import { Gravatar } from "@/components/icons";
+import { Gravatar, N8n } from "@/components/icons";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -25,6 +25,7 @@ const socialLinks = [
   { icon: Github, href: "https://github.com/Sarry000", name: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/sarthak-bukane-958154229", name: "LinkedIn" },
   { icon: Gravatar, href: "https://gravatar.com/zealousblizzard905a8cade5", name: "Gravatar" },
+  { icon: N8n, href: "https://n8n.io/creators/sarry/", name: "n8n" },
 ];
 
 export function Contact() {
