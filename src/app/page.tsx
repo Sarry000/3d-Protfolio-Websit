@@ -8,7 +8,7 @@ import { Skills } from '@/components/sections/skills';
 
 export default function Home() {
   return (
-    <div className="bg-background text-foreground flex flex-col items-center w-full">
+    <div className="bg-background text-foreground flex flex-col items-center w-full overflow-x-hidden">
       <Header />
       <main className="w-full">
         <Hero />
@@ -20,7 +20,8 @@ export default function Home() {
           <Skills />
           <Contact />
         </div>
-      </main>      <Footer />
+      </main>
+      <Footer />
     </div>
   );
 }
