@@ -35,7 +35,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-primary/80 transition-colors hover:text-primary hover:text-glow"
+              className="text-sm font-medium text-primary/90 transition-colors hover:text-primary hover:text-glow"
             >
               {link.name}
             </Link>
@@ -59,7 +59,7 @@ export function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-lg font-medium text-primary/80 transition-colors hover:text-primary hover:text-glow"
+                      className="text-lg font-medium text-primary/90 transition-colors hover:text-primary hover:text-glow"
                     >
                       {link.name}
                     </Link>
