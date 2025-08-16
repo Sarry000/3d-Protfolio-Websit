@@ -1,10 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { navLinks } from '@/lib/data';
 import { Button } from './ui/button';
-import { cn } from '@/lib/utils';
 
 export function Header() {
   return (
