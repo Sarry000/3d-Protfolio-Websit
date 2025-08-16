@@ -10,9 +10,9 @@ export function Hero() {
             title="Interactive 3D robot character"
           ></iframe>
       </div>
-      <div className="relative z-10 flex h-full items-end justify-center pb-12">
+      <div className="relative z-10 flex h-full items-end justify-center pb-24">
         <div className="text-center">
-            <h1 className="text-4xl font-bold text-transparent md:text-6xl">
+            <h1 className="text-4xl font-bold text-white md:text-6xl [text-shadow:0_0_20px_hsl(var(--primary))]">
               SarthakVerse
             </h1>
         </div>

@@ -88,7 +88,7 @@ export function Contact() {
                       <FormItem>
                         <FormLabel className="text-primary">Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your Name" {...field} className="bg-background/50"/>
+                          <Input placeholder="Your Name" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -101,7 +101,7 @@ export function Contact() {
                       <FormItem>
                         <FormLabel className="text-primary">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="your.email@example.com" {...field} className="bg-background/50"/>
+                          <Input placeholder="your.email@example.com" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -114,7 +114,7 @@ export function Contact() {
                       <FormItem>
                         <FormLabel className="text-primary">Message</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="Your message..." {...field} className="min-h-[120px] bg-background/50"/>
+                          <Textarea placeholder="Your message..." {...field} className="min-h-[120px]"/>
                         </FormControl>
                         <FormMessage />
                       </FormItem>
