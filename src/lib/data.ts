@@ -17,7 +17,7 @@ export const projects = [
     link: 'https://github.com/Sarry000/rocket-booster',
   },
   {
-    title: 'Project Beta',
+    title: 'Maze-Ball',
     description: 'A responsive e-commerce platform developed with React and Redux for state management. Integrated with Stripe for seamless payments and designed for a high conversion rate.',
     techStack: ['React', 'Redux', 'Stripe', 'Node.js'],
     imageUrl: 'https://placehold.co/800x600.png',
