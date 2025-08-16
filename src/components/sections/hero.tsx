@@ -6,17 +6,17 @@ import Image from 'next/image';
 
 export function Hero() {
   return (
-    <section id="home" className="h-screen w-full">
-      <div className="absolute inset-0 z-0">
-         <Image
-            src="https://placehold.co/1200x800.png"
-            alt="3D robot character"
-            fill
-            data-ai-hint="robot character"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-background/60" />
+    <section id="home" className="relative h-screen w-full">
+      <div className="sticky top-0 h-screen w-full">
+        <Image
+          src="https://placehold.co/1200x800.png"
+          alt="3D robot character"
+          fill
+          data-ai-hint="robot character"
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
         <div className="flex-grow flex flex-col items-center justify-center">

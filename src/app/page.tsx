@@ -9,18 +9,19 @@ import { Footer } from '@/components/footer';
 
 export default function Home() {
   return (
-    <div className="relative bg-background text-foreground overflow-x-hidden">
-      <div className="light-spot top-[-20%] left-[-10%]" />
-      <div className="light-spot top-[20%] right-[-10%]" />
-      
+    <div className="bg-background text-foreground">
       <Header />
-      <main className="relative z-10">
+      <main>
         <Hero />
-        <About />
-        <Projects />
-        <Testimonials />
-        <Gallery />
-        <Contact />
+        <div className="relative z-10 bg-background">
+          <div className="light-spot top-[-20%] left-[-10%]" />
+          <div className="light-spot top-[20%] right-[-10%]" />
+          <About />
+          <Projects />
+          <Testimonials />
+          <Gallery />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </div>
