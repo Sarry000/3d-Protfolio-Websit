@@ -13,7 +13,6 @@ export const projects = [
     title: 'Rocket Booster',
     description: 'A multi-level game developed in the Unity Engine. I implemented C# scripts for rocket movement, boosting mechanics, and level progression. This project showcases skills in game physics, level design, and integrating various assets to enhance the user experience.',
     techStack: ['Unity', 'C#', 'Game Physics', 'Level Design'],
-    imageUrl: 'https://placehold.co/800x600.png',
     imageUrl: '/Rocket-Booster.gif',
     links: [
       {
@@ -32,9 +31,8 @@ export const projects = [
     title: 'Maze-Ball',
     description: 'A 3D physics-based rolling ball game developed in Unity. The objective is to navigate a ball through a series of complex mazes filled with static and dynamic obstacles. This project showcases core game development concepts like player control, physics interactions, and level design.',
     techStack: ['Unity', 'C#', 'Physics', 'Level Design'],
-    imageUrl: 'https://placehold.co/800x600.png',
-    aiHint: 'futuristic dashboard',
     imageUrl: '/Maze.gif',
+    aiHint: 'futuristic dashboard',
     links: [
       {
         name: 'View Project',
@@ -65,7 +63,7 @@ export const projects = [
     title: 'AI Telegram Group-Chat Summarizer (n8n)',
     description: 'This workflow automates the process of summarizing Telegram group chat messages using AI. It fetches messages, generates concise summaries with Google Gemini, and sends them to a designated chat, keeping you updated without information overload.',
     techStack: ['n8n', 'Google Gemini', 'Telegram API', 'Automation'],
-    imageUrl: 'https://placehold.co/800x600.png',
+    imageUrl: '/telegram.png',
     links: [
       {
         name: 'View on GitHub',
