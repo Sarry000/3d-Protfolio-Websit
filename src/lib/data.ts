@@ -76,10 +76,10 @@ export const projects = [
 ];
 
 export const galleryImages = [
-  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 1', hint: 'AI gaming' },
-  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 2', hint: '3d robot' },
-  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 3', hint: 'virtual reality' },
-  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 4', hint: 'futuristic game' },
-  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 5', hint: 'cyborg player' },
-  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 6', hint: 'holographic interface' },
+  { src: 'https://placehold.co/600x401.png', alt: 'AI Gaming Concept 1', hint: 'AI gaming' },
+  { src: 'https://placehold.co/600x402.png', alt: 'AI Gaming Concept 2', hint: '3d robot' },
+  { src: 'https://placehold.co/600x403.png', alt: 'AI Gaming Concept 3', hint: 'virtual reality' },
+  { src: 'https://placehold.co/600x404.png', alt: 'AI Gaming Concept 4', hint: 'futuristic game' },
+  { src: 'https://placehold.co/600x405.png', alt: 'AI Gaming Concept 5', hint: 'cyborg player' },
+  { src: 'https://placehold.co/600x406.png', alt: 'AI Gaming Concept 6', hint: 'holographic interface' },
 ];
