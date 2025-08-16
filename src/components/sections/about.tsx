@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useInView } from "@/hooks/use-in-view";
-import { Html5, Css3, Javascript, ReactLogo, Spline } from "@/components/icons";
+import { Html5, Css3, Javascript, ReactLogo, Spline, Python, Unity, Csharp, Ai } from "@/components/icons";
 
 const skills = [
   { name: "HTML", icon: Html5 },
@@ -10,6 +10,10 @@ const skills = [
   { name: "JavaScript", icon: Javascript },
   { name: "React", icon: ReactLogo },
   { name: "Spline", icon: Spline },
+  { name: "Python", icon: Python },
+  { name: "Unity", icon: Unity },
+  { name: "C#", icon: Csharp },
+  { name: "AI", icon: Ai },
 ];
 
 export function About() {
@@ -29,7 +33,7 @@ export function About() {
             <div className="relative group">
               <div className="absolute -inset-1.5 bg-gradient-to-r from-accent to-primary rounded-full opacity-50 blur-xl group-hover:opacity-75 transition duration-500"></div>
               <Image
-                src="/Profile.png"
+                src="/profile.png"
                 alt="Sarthak"
                 width={400}
                 height={400}
@@ -70,3 +74,5 @@ export function About() {
     </section>
   );
 }
+
+    
