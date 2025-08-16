@@ -1,3 +1,4 @@
+
 import { Github, ExternalLink } from "lucide-react";
 
 export const navLinks = [
@@ -75,10 +76,10 @@ export const projects = [
 ];
 
 export const galleryImages = [
-  { src: 'https://placehold.co/600x400.png', alt: 'Design Tile 1', hint: 'abstract art' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Design Tile 2', hint: 'futuristic city' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Design Tile 3', hint: 'digital render' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Design Tile 4', hint: 'glowing shapes' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Design Tile 5', hint: 'neon lines' },
-  { src: 'https://placehold.co/600x400.png', alt: 'Design Tile 6', hint: 'cybernetic patterns' },
+  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 1', hint: 'AI gaming' },
+  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 2', hint: '3d robot' },
+  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 3', hint: 'virtual reality' },
+  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 4', hint: 'futuristic game' },
+  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 5', hint: 'cyborg player' },
+  { src: 'https://placehold.co/600x400.png', alt: 'AI Gaming Concept 6', hint: 'holographic interface' },
 ];
