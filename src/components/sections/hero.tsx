@@ -17,12 +17,15 @@ export function Hero() {
         <div className="absolute inset-0 bg-background/60" />
       </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
-        <div className="flex-grow flex flex-col items-center justify-center">
+        <div className="flex-grow flex flex-col items-center justify-center px-4">
           <h1 className="text-7xl font-bold text-white md:text-8xl [text-shadow:0_0_20px_hsl(var(--primary))]">
             Sarthak
           </h1>
-          <p className="mt-4 text-xl text-foreground/80 md:text-2xl">
-            Full Stack Developer & 3D Designer
+          <p className="mt-4 text-xl font-semibold text-foreground/90 md:text-2xl">
+            Computer Engineering Student & Game Developer
+          </p>
+          <p className="mt-4 max-w-2xl text-base text-foreground/70 md:text-lg">
+            A passionate and detail-oriented final-year Computer Engineering student with a strong foundation in programming, game development, and database management. Proficient in Python, JavaScript, and Unity Engine.
           </p>
           <div className="mt-8 flex gap-4">
             <Button asChild size="lg" className="glow-shadow hover:glow-shadow-lg">
