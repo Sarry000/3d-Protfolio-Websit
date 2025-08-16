@@ -29,11 +29,10 @@ export function About() {
             <div className="relative group">
               <div className="absolute -inset-1.5 bg-gradient-to-r from-accent to-primary rounded-full opacity-50 blur-xl group-hover:opacity-75 transition duration-500"></div>
               <Image
-                src="https://placehold.co/400x400.png"
+                src="/profile.jpg"
                 alt="Sarthak"
                 width={400}
                 height={400}
-                data-ai-hint="developer portrait"
                 className="relative rounded-full aspect-square object-cover border-4 border-background transition-transform duration-300 group-hover:scale-105"
               />
             </div>
