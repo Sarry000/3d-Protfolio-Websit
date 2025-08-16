@@ -76,7 +76,7 @@ export const projects = [
     title: 'My Portfolio',
     description: 'This very portfolio website, built with Next.js, React, and Tailwind CSS to showcase my skills and projects in a modern and interactive way. This project demonstrates my ability to create responsive, visually appealing, and performant web applications.',
     techStack: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'ShadCN UI'],
-    imageUrl: 'https://placehold.co/1200x600.png',
+    imageUrl: '/Portfoliooo.gif',
     aiHint: 'portfolio website',
     links: [
       {
