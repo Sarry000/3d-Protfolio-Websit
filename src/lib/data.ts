@@ -18,8 +18,8 @@ export const projects = [
   },
   {
     title: 'Maze-Ball',
-    description: 'A responsive e-commerce platform developed with React and Redux for state management. Integrated with Stripe for seamless payments and designed for a high conversion rate.',
-    techStack: ['React', 'Redux', 'Stripe', 'Node.js'],
+    description: 'A 3D physics-based rolling ball game developed in Unity. The objective is to navigate a ball through a series of complex mazes filled with static and dynamic obstacles. This project showcases core game development concepts like player control, physics interactions, and level design.',
+    techStack: ['Unity', 'C#', 'Physics', 'Level Design'],
     imageUrl: 'https://placehold.co/800x600.png',
     aiHint: 'futuristic dashboard',
     link: '#',
