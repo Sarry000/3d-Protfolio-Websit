@@ -3,10 +3,22 @@
 import Link from 'next/link';
 import { navLinks } from '@/lib/data';
 import { Button } from './ui/button';
+import { useEffect, useState } from 'react';
+import { cn } from '@/lib/utils';
 
 export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full bg-transparent">
+    <header className={cn("sticky top-0 z-50 w-full transition-colors duration-300", scrolled ? "bg-background/80 backdrop-blur-sm" : "bg-transparent")}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="text-2xl font-bold text-glow">
           Sarthak
@@ -23,7 +35,7 @@ export function Header() {
           ))}
         </nav>
         <Button asChild variant="outline" className="glassmorphism glow-shadow hover:glow-shadow-lg hover:border-accent hover:text-accent">
-          <Link href="#contact">Contact</Link>
+          <Link href="#contact">Contact Me</Link>
         </Button>
       </div>
     </header>
