@@ -3,9 +3,9 @@ import { Hero } from '@/components/sections/hero';
 import { About } from '@/components/sections/about';
 import { Projects } from '@/components/sections/projects';
 import { Testimonials } from '@/components/sections/testimonials';
-import { Gallery } from '@/components/sections/gallery';
 import { Contact } from '@/components/sections/contact';
 import { Footer } from '@/components/footer';
+import { Gallery } from '@/components/sections/gallery';
 
 export default function Home() {
   return (
@@ -22,8 +22,7 @@ export default function Home() {
           <Gallery />
           <Contact />
         </div>
-      </main>
-      <Footer />
+      </main>      <Footer />
     </div>
   );
 }

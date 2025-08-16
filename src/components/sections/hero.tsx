@@ -25,10 +25,10 @@ export function Hero() {
             Computer Engineering Student & Game Developer
           </p>
           <p className="mt-4 max-w-2xl text-base text-foreground/70 md:text-lg">
-            A passionate and detail-oriented final-year Computer Engineering student with a strong foundation in programming, game development, and database management. Proficient in Python, JavaScript, and Unity Engine.
-          </p>
+ Computer Engineering Student & Game Developer\n\nA passionate and detail-oriented final-year Computer Engineering student with a strong foundation in programming, game development, and database management. Proficient in Python, JavaScript, and Unity Engine.</p>
           <div className="mt-8 flex gap-4">
-            <Button asChild size="lg" className="glow-shadow hover:glow-shadow-lg">
+            <Button asChild size="lg"
+ className="glow-shadow hover:glow-shadow-lg">
               <Link href="#projects">View My Work</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="glassmorphism glow-shadow hover:glow-shadow-lg hover:bg-primary/10">
