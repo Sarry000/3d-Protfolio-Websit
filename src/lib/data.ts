@@ -70,7 +70,7 @@ export const projects = [
     links: [
       {
         name: 'View on GitHub',
-        href: '#',
+        href: 'https://github.com/Sarry000/n8n-telegram-digest-bot',
         icon: Github
       }
     ]
