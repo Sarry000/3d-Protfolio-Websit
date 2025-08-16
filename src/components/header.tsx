@@ -25,22 +25,22 @@ export function Header() {
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="text-2xl font-bold text-glow">
-          SarthakVerse
+        <Link href="/" className="text-2xl font-bold">
+          Sarthak
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-primary/80 transition-colors hover:text-primary hover:text-glow"
+              className="text-sm font-medium text-primary/80 transition-colors hover:text-primary"
             >
               {link.name}
             </Link>
           ))}
         </nav>
-        <Button asChild className="glow-shadow transition-shadow hover:glow-shadow-lg">
-          <Link href="#contact">Contact Me</Link>
+        <Button asChild variant="outline">
+          <Link href="#contact">Contact</Link>
         </Button>
       </div>
     </header>
