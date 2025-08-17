@@ -90,7 +90,7 @@ const sendEmailFlow = ai.defineFlow(
     try {
       const { data, error } = await resend.emails.send({
         // IMPORTANT: This "from" address must be a verified domain in your Resend account.
-        // For testing, Resend allows 'onboarding@resend.dev', but you should change it.
+        // For testing, Resend allows 'onboarding@resend.dev', which is what we are using here.
         from: 'SarthakVerse <onboarding@resend.dev>',
         to: [recipient],
         subject: subject,
