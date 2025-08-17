@@ -69,7 +69,7 @@ const sendEmailFlow = ai.defineFlow(
       }
       const {subject, body} = output;
       const recipient = 'sarthakbukane2710@gmail.com';
-      console.log(`To: ${recipient}`);
+ console.log(`To: ${recipient}`);
       console.log(`From: ${input.name} <${input.email}>`);
       console.log(`Subject: ${subject}`);
       console.log('---------------------');
@@ -84,7 +84,7 @@ const sendEmailFlow = ai.defineFlow(
       throw new Error('Could not generate email content.');
     }
 
-    const {subject, body} = output;
+ const {subject, body} = output;
     const recipient = 'sarthakbukane2710@gmail.com';
 
     try {
@@ -99,6 +99,7 @@ const sendEmailFlow = ai.defineFlow(
       });
 
       if (error) {
+        console.error('Resend API Error:', error);
         throw error;
       }
 
