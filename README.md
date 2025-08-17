@@ -1,8 +1,24 @@
-# SarthakVerse Portfolio
+# SarthakVerse Portfolio - Personal Website
 
-This is a Next.js portfolio website created in Firebase Studio.
+This is a personal portfolio website built with Next.js, showcasing my projects, skills, and providing a way to contact me. It was initially created in Firebase Studio and is designed to be a responsive and modern representation of my work.
 
 To get started, take a look at `src/app/page.tsx`.
+
+## Technologies Used
+
+*   **Next.js:** A React framework for server-side rendering and static site generation.
+*   **React:** A JavaScript library for building user interfaces.
+*   **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
+*   **Tailwind CSS:** A utility-first CSS framework for rapidly building custom designs.
+*   **Firebase:** Used for backend services (specifically for the contact form).
+*   **Google Gemini:** Integrated for AI functionality, likely powering the contact form's email sending feature.
+
+## Features
+
+*   **Projects Section:** Displays a portfolio of my work.
+*   **Skills Section:** Highlights my technical skills.
+*   **Contact Section:** Provides a form for visitors to get in touch.
+*   **Responsive Design:** Adapts to different screen sizes.
 
 ## Running Locally
 
