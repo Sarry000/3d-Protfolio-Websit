@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from '@/components/ui/button';
@@ -8,16 +9,34 @@ import { Loader } from 'lucide-react';
 export function Hero() {
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
   const [showSpline, setShowSpline] = useState(false);
+  const [isSplineLoading, setIsSplineLoading] = useState(true);
 
   useEffect(() => {
     // Delay showing the spline to ensure the main page content loads first
-    const timer = setTimeout(() => {
+    const showTimer = setTimeout(() => {
       setShowSpline(true);
-    }, 500); // 500ms delay
+    }, 500);
 
-    return () => clearTimeout(timer);
-  }, []);
+    // Set a timeout for the spline to load
+    const loadTimer = setTimeout(() => {
+      if (!isSplineLoaded) {
+        // If spline hasn't loaded in 10 seconds, stop showing the loader
+        setIsSplineLoading(false);
+        console.warn("Spline loading timed out. Check the Spline URL or network connection.");
+      }
+    }, 10000); // 10 second timeout
+
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(loadTimer);
+    };
+  }, [isSplineLoaded]);
   
+  const handleSplineLoad = () => {
+    setIsSplineLoaded(true);
+    setIsSplineLoading(false);
+  };
+
   return (
     <section id="home" className="relative h-screen w-full">
       <div className="absolute inset-0 bg-background">
@@ -29,10 +48,10 @@ export function Hero() {
             height='100%'
             className='absolute inset-0 h-full w-full object-cover transition-opacity duration-1000'
             style={{ opacity: isSplineLoaded ? 1 : 0 }}
-            onLoad={() => setIsSplineLoaded(true)}
+            onLoad={handleSplineLoad}
           ></iframe>
         )}
-        {!isSplineLoaded && (
+        {isSplineLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-background">
             <Loader className="h-12 w-12 animate-spin text-primary" />
           </div>
