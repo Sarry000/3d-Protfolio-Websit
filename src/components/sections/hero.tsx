@@ -2,18 +2,41 @@
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { Loader } from 'lucide-react';
 
 export function Hero() {
+  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
+  const [showSpline, setShowSpline] = useState(false);
+
+  useEffect(() => {
+    // Delay showing the spline to ensure the main page content loads first
+    const timer = setTimeout(() => {
+      setShowSpline(true);
+    }, 500); // 500ms delay
+
+    return () => clearTimeout(timer);
+  }, []);
+  
   return (
     <section id="home" className="relative h-screen w-full">
-      <div className="absolute inset-0">
-        <iframe
-          src='https://my.spline.design/nexbotrobotcharacterconcept-8YIJtt5hQ3zIUjbhvSbNsUwq/'
-          frameBorder='0'
-          width='100%'
-          height='100%'
-          className='object-cover'
-        ></iframe>
+      <div className="absolute inset-0 bg-background">
+        {showSpline && (
+          <iframe
+            src='https://my.spline.design/nexbotrobotcharacterconcept-8YIJtt5hQ3zIUjbhvSbNsUwq/'
+            frameBorder='0'
+            width='100%'
+            height='100%'
+            className='absolute inset-0 h-full w-full object-cover transition-opacity duration-1000'
+            style={{ opacity: isSplineLoaded ? 1 : 0 }}
+            onLoad={() => setIsSplineLoaded(true)}
+          ></iframe>
+        )}
+        {!isSplineLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center bg-background">
+            <Loader className="h-12 w-12 animate-spin text-primary" />
+          </div>
+        )}
         <div className="absolute inset-0 bg-background/60" />
       </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
