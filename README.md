@@ -62,40 +62,4 @@ To run this project on your local machine, you'll need to have [Node.js](https:/
 
 You should now have the full application running locally!
 
-## Sharing on GitHub
 
-To share your project on GitHub and deploy it as a live website using GitHub Pages, follow these steps.
-
-### Part 1: Get Your Code on GitHub
-
-1.  **Create a GitHub Repository:** Go to [GitHub](https://github.com) and create a new, empty repository. Do not initialize it with a README or license file.
-2.  **Initialize Git Locally:** Open a terminal in your project's root folder and run these commands:
-    ```bash
-    git init
-    git add .
-    git commit -m "Initial commit"
-    ```
-3.  **Connect and Push:** Connect your local project to the GitHub repository you just created and push your code. Replace `<YOUR_USERNAME>` and `<YOUR_REPOSITORY_NAME>` with your actual GitHub details.
-    ```bash
-    git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY_NAME>.git
-    git branch -M main
-    git push -u origin main
-    ```
-
-### Part 2: Deploy to GitHub Pages
-
-Your project is already configured with a script to build and deploy your site.
-
-1.  **Run the Deploy Script:** In your terminal, run the following command:
-    ```bash
-    npm run deploy
-    ```
-    This command will build your Next.js application, create a static version in an `out` folder, and then automatically push that folder to a `gh-pages` branch in your repository.
-
-2.  **Configure GitHub Pages:**
-    *   In your GitHub repository, go to `Settings` > `Pages`.
-    *   Under "Build and deployment", set the **Source** to **Deploy from a branch**.
-    *   Set the **Branch** to `gh-pages` and the folder to `/ (root)`.
-    *   Click **Save**.
-
-After a few minutes, your website will be live at `https://<YOUR_USERNAME>.github.io/<YOUR_REPOSITORY_NAME>/`.
