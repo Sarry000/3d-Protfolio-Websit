@@ -100,7 +100,6 @@ const sendEmailFlow = ai.defineFlow(
         console.log('---------------------');
         console.log(body);
         console.log('---------------------');
-        // We are not throwing an error to the client anymore.
         return;
       }
 
