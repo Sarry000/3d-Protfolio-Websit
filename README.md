@@ -2,6 +2,8 @@
 
 This is a personal portfolio website built with Next.js, showcasing my projects, skills, and providing a way to contact me. It was initially created in Firebase Studio and is designed to be a responsive and modern representation of my work.
 
+![Portfolio Demo](public/Portfoliooo.gif)
+
 To get started, take a look at `src/app/page.tsx`.
 
 ## Technologies Used
@@ -19,6 +21,12 @@ To get started, take a look at `src/app/page.tsx`.
 *   **Skills Section:** Highlights my technical skills.
 *   **Contact Section:** Provides a form for visitors to get in touch.
 *   **Responsive Design:** Adapts to different screen sizes.
+
+## Usage
+
+As a personal portfolio website, the primary usage is for visitors to view my projects, learn about my skills, and contact me through the provided form.
+
+
 
 ## Running Locally
 

@@ -42,7 +42,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-background">
         {showSpline && (
           <iframe
-            src='https://my.spline.design/nexbotrobotcharacterconcept-8YIJtt5hQ3zIUjbhvSbNsUwq/'
+            src='https://my.spline.design/nexbotrobotcharacterconcept-8YIJtt5hQ3zIUjbhvSbNsUwq/?quality=low'
             frameBorder='0'
             width='100%'
             height='100%'
