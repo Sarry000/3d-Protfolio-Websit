@@ -44,7 +44,7 @@ export function Contact() {
     try {
       await sendEmail(values);
       toast({
-        variant: 'default',
+        variant: "default",
         title: "Message Sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
