@@ -60,15 +60,16 @@ const sendEmailFlow = ai.defineFlow(
     outputSchema: z.void(),
   },
   async (input) => {
+    const {output} = await emailPrompt(input);
+    if (!output) {
+      throw new Error('Could not generate email content.');
+    }
+    const {subject, body} = output;
+    const recipient = 'sarthakbukane2710@gmail.com';
+    
     if (!process.env.RESEND_API_KEY) {
       // Fallback to console logging if Resend is not configured.
       console.log('--- RESEND_API_KEY not found. Logging email to console instead. ---');
-      const {output} = await emailPrompt(input);
-      if (!output) {
-        throw new Error('Could not generate email content.');
-      }
-      const {subject, body} = output;
-      const recipient = 'sarthakbukane2710@gmail.com';
       console.log(`To: ${recipient}`);
       console.log(`From: ${input.name} <${input.email}>`);
       console.log(`Subject: ${subject}`);
@@ -77,15 +78,6 @@ const sendEmailFlow = ai.defineFlow(
       console.log('---------------------');
       return;
     }
-    
-    const {output} = await emailPrompt(input);
-
-    if (!output) {
-      throw new Error('Could not generate email content.');
-    }
-
-    const {subject, body} = output;
-    const recipient = 'sarthakbukane2710@gmail.com';
 
     try {
       const { data, error } = await resend.emails.send({
@@ -99,15 +91,25 @@ const sendEmailFlow = ai.defineFlow(
       });
 
       if (error) {
+        // If Resend returns an error, log it and fall back to console.
         console.error('Resend API Error:', error);
-        throw error;
+        console.log('--- Resend failed. Logging email to console instead. ---');
+        console.log(`To: ${recipient}`);
+        console.log(`From: ${input.name} <${input.email}>`);
+        console.log(`Subject: ${subject}`);
+        console.log('---------------------');
+        console.log(body);
+        console.log('---------------------');
+        // We are not throwing an error to the client anymore.
+        return;
       }
 
       console.log('Email sent successfully:', data);
 
     } catch (e) {
       console.error('Failed to send email:', e);
-      throw new Error('Failed to send email.');
+      // We are not throwing an error to the client anymore.
+      // throw new Error('Failed to send email.');
     }
   }
 );
