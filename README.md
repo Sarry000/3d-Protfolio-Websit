@@ -13,20 +13,15 @@ To get started, take a look at `src/app/page.tsx`.
 *   **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
 *   **Tailwind CSS:** A utility-first CSS framework for rapidly building custom designs.
 *   **Firebase:** Used for backend services (specifically for the contact form).
-*   **Google Gemini:** Integrated for AI functionality, likely powering the contact form's email sending feature.
+*   **Google Gemini:** Integrated for AI functionality, powering the contact form's email generation.
+*   **Resend:** Used for sending emails from the contact form.
 
 ## Features
 
 *   **Projects Section:** Displays a portfolio of my work.
 *   **Skills Section:** Highlights my technical skills.
-*   **Contact Section:** Provides a form for visitors to get in touch.
+*   **Contact Section:** Provides a form for visitors to get in touch, which sends an email via Resend.
 *   **Responsive Design:** Adapts to different screen sizes.
-
-## Usage
-
-As a personal portfolio website, the primary usage is for visitors to view my projects, learn about my skills, and contact me through the provided form.
-
-
 
 ## Running Locally
 
@@ -41,10 +36,14 @@ To run this project on your local machine, you'll need to have [Node.js](https:/
     npm install
     ```
 
-4.  **Set Up Environment Variables:** Create a new file in the root of your project named `.env` and add any necessary environment variables. For the AI features (like the contact form) to work, you will need a Gemini API key. You can get one from [Google AI Studio](https://aistudio.google.com/app/apikey).
+4.  **Set Up Environment Variables:** Create a new file in the root of your project named `.env` and add the required environment variables.
+    *   You can get a Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+    *   You can get a Resend API key from the [Resend website](https://resend.com/).
     ```.env
-    GEMINI_API_KEY=YOUR_API_KEY_HERE
+    GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
+    RESEND_API_KEY=YOUR_RESEND_API_KEY_HERE
     ```
+    **Note:** For Resend to send emails, you must also verify a domain. The "from" email address in `src/ai/flows/send-email-flow.ts` must use that verified domain.
 
 5.  **Run the Development Servers:** You need to run two servers simultaneously for the full application to work.
 
@@ -58,7 +57,7 @@ To run this project on your local machine, you'll need to have [Node.js](https:/
         ```bash
         npm run genkit:dev
         ```
-        This starts the server that handles the AI functionality.
+        This starts the server that handles the AI functionality (like sending emails).
 
 You should now have the full application running locally!
 

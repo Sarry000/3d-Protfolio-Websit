@@ -8,6 +8,15 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'zod';
+import { Resend } from 'resend';
+
+if (!process.env.RESEND_API_KEY) {
+  console.warn(
+    'Missing RESEND_API_KEY environment variable. Emails will not be sent.'
+  );
+}
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const SendEmailInputSchema = z.object({
   name: z.string().describe('The name of the person sending the message.'),
@@ -51,6 +60,24 @@ const sendEmailFlow = ai.defineFlow(
     outputSchema: z.void(),
   },
   async (input) => {
+    if (!process.env.RESEND_API_KEY) {
+      // Fallback to console logging if Resend is not configured.
+      console.log('--- RESEND_API_KEY not found. Logging email to console instead. ---');
+      const {output} = await emailPrompt(input);
+      if (!output) {
+        throw new Error('Could not generate email content.');
+      }
+      const {subject, body} = output;
+      const recipient = 'sarthakbukane2710@gmail.com';
+      console.log(`To: ${recipient}`);
+      console.log(`From: ${input.name} <${input.email}>`);
+      console.log(`Subject: ${subject}`);
+      console.log('---------------------');
+      console.log(body);
+      console.log('---------------------');
+      return;
+    }
+    
     const {output} = await emailPrompt(input);
 
     if (!output) {
@@ -60,16 +87,26 @@ const sendEmailFlow = ai.defineFlow(
     const {subject, body} = output;
     const recipient = 'sarthakbukane2710@gmail.com';
 
-    // In a real application, you would use an email sending service like Resend or Nodemailer.
-    // For this example, we'll log the email to the console.
-    console.log('--- Sending Email ---');
-    console.log(`To: ${recipient}`);
-    console.log(`From: ${input.name} <${input.email}>`);
-    console.log(`Subject: ${subject}`);
-    console.log('---------------------');
-    console.log(body);
-    console.log('---------------------');
-    // NOTE: The above console.log is a placeholder. You would need to integrate
-    // a service like SendGrid, Mailgun, or use an SMTP server to actually send the email.
+    try {
+      const { data, error } = await resend.emails.send({
+        // IMPORTANT: This "from" address must be a verified domain in your Resend account.
+        // For testing, Resend allows 'onboarding@resend.dev', but you should change it.
+        from: 'SarthakVerse <onboarding@resend.dev>',
+        to: [recipient],
+        subject: subject,
+        html: body.replace(/\n/g, '<br>'), // Resend prefers HTML, so we replace newlines.
+        reply_to: input.email,
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      console.log('Email sent successfully:', data);
+
+    } catch (e) {
+      console.error('Failed to send email:', e);
+      throw new Error('Failed to send email.');
+    }
   }
 );
