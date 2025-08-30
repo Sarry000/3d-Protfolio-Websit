@@ -26,10 +26,10 @@ export function Hero() {
         )}
       >
         <iframe
-          src="https://my.spline.design/robotignitionsuitedisable-c28f0927c81d23455986817688b7d4c8/"
-          frameBorder="0"
-          width="100%"
-          height="100%"
+          src='https://my.spline.design/nexbotrobotcharacterconcept-dkmLeloEp6B1FHcSANkbHhrj/'
+          frameBorder='0'
+          width='100%'
+          height='100%'
           onLoad={() => setIsSplineLoaded(true)}
           title="3D Robot Animation"
         ></iframe>
