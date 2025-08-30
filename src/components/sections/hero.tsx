@@ -1,27 +1,48 @@
 "use client";
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
+import { cn } from '@/lib/utils';
+
+function HeroSpinner() {
+  return (
+    <div className="absolute inset-0 flex items-center justify-center bg-background/80 z-20">
+      <div className="h-16 w-16 animate-spin rounded-full border-4 border-solid border-primary border-t-transparent" />
+    </div>
+  );
+}
 
 export function Hero() {
+  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
+
   return (
-    <section id="home" className="relative h-screen w-full">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="https://picsum.photos/1200/800"
-          alt="Futuristic robot background"
-          data-ai-hint="futuristic robot"
-          fill
-          className="object-cover"
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-background/60" />
+    <section id="home" className="relative h-screen w-full overflow-hidden">
+      {/* Spline 3D Scene */}
+      <div
+        className={cn(
+          "absolute inset-0 z-10 transition-opacity duration-1000",
+          isSplineLoaded ? 'opacity-100' : 'opacity-0'
+        )}
+      >
+        <iframe
+          src="https://my.spline.design/robotignitionsuitedisable-c28f0927c81d23455986817688b7d4c8/"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+          onLoad={() => setIsSplineLoaded(true)}
+          title="3D Robot Animation"
+        ></iframe>
       </div>
-      
+
+      {/* Loading Spinner Overlay */}
+      {!isSplineLoaded && <HeroSpinner />}
+
+      {/* Overlay to darken the scene */}
+      <div className="absolute inset-0 z-20 bg-background/60" />
+
       {/* Foreground Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
+      <div className="relative z-30 flex h-full flex-col items-center justify-center text-center">
         <div className="flex-grow flex flex-col items-center justify-center px-4">
           <h1 className="text-7xl font-bold text-white md:text-8xl [text-shadow:0_0_20px_hsl(var(--primary))]">
             Sarthak
