@@ -2,41 +2,21 @@
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { useState } from 'react';
-import { Loader } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 export function Hero() {
-  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
-
-  const handleSplineLoad = () => {
-    setIsSplineLoaded(true);
-  };
-
   return (
     <section id="home" className="relative h-screen w-full">
       {/* Background elements */}
       <div className="absolute inset-0 bg-background">
-        {/* Loading Spinner */}
-        {!isSplineLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-background z-10">
-            <Loader className="h-12 w-12 animate-spin text-primary" />
-          </div>
-        )}
-        {/* Spline iFrame */}
-        <iframe
-          src='https://my.spline.design/robotfollowsanotherone-d859421f52d7a5c8a956163359d40398/'
-          frameBorder='0'
-          width='100%'
-          height='100%'
-          className={cn(
-            'absolute inset-0 h-full w-full object-cover transition-opacity duration-1000',
-            isSplineLoaded ? 'opacity-100' : 'opacity-0'
-          )}
-          onLoad={handleSplineLoad}
-          aria-hidden={!isSplineLoaded}
-          title="Interactive 3D Robot Scene"
-        ></iframe>
+        <Image
+          src="https://picsum.photos/1200/800"
+          alt="Futuristic robot"
+          fill
+          data-ai-hint="futuristic robot"
+          className="object-cover"
+          priority
+        />
         {/* Overlay */}
         <div className="absolute inset-0 bg-background/60" />
       </div>
