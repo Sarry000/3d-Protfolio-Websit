@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -46,7 +45,7 @@ export function Certificates() {
               </CardContent>
               <CardFooter className="p-6 pt-0">
                 <Button asChild className="w-full glow-shadow transition-shadow hover:glow-shadow-lg">
-                  <Link href={cert.verifyUrl} target="_blank">
+                  <Link href={cert.verifyUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     Verify Certificate
                   </Link>
