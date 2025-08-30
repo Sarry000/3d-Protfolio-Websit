@@ -2,24 +2,38 @@
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
+import { useState, Suspense } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
+
+function SplineScene() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="absolute inset-0 bg-background">
+      {!isLoaded && (
+        <Skeleton className="absolute inset-0" />
+      )}
+      <iframe
+        src="https://prod.spline.design/T50jCj8k-y-tT8nM/scene.splinecode"
+        frameBorder="0"
+        width="100%"
+        height="100%"
+        className={`transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        onLoad={() => setIsLoaded(true)}
+      ></iframe>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-background/60" />
+    </div>
+  );
+}
 
 export function Hero() {
   return (
     <section id="home" className="relative h-screen w-full">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-background">
-        <Image
-          src="https://picsum.photos/1200/800"
-          alt="Futuristic robot"
-          fill
-          data-ai-hint="futuristic robot"
-          className="object-cover"
-          priority
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-background/60" />
-      </div>
+      <Suspense fallback={<Skeleton className="absolute inset-0" />}>
+        <SplineScene />
+      </Suspense>
       
       {/* Foreground Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
