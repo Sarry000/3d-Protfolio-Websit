@@ -92,19 +92,19 @@ export const projects = [
 export const certificates = [
   {
     title: " Generative AI Professional",
-    issuer: "Generative AI",
+    issuer: "Oracal Certification",
     date: "2025",
-    imageUrl: "/Unity-Certificate-Preview.png",
+    imageUrl: "/Oci.png",
     aiHint: "Generative ai certificate",
-    verifyUrl: "/eCertificate.pdf",
+    verifyUrl: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=572DD41D7A1BAB6923E1EC448F0103256AE426CF41E9DF3E15C919AA1B4155A5",
   },
   {
-    title: "n8n Workflow Automation",
-    issuer: "n8n",
-    date: "2024",
-    imageUrl: "https://placehold.co/600x400/6922A3/FFF?text=n8n+Certified",
+    title: "EA Gaming Certificate",
+    issuer: "Forge",
+    date: "July 2025",
+    imageUrl: "/Game.png",
     aiHint: "automation certificate",
-    verifyUrl: "#",
+    verifyUrl: "/Game.png",
   },
   {
     title: "Advanced Python for Developers",
@@ -112,7 +112,7 @@ export const certificates = [
     date: "2023",
     imageUrl: "https://placehold.co/600x400/3776AB/FFF?text=Python+Certified",
     aiHint: "python certificate",
-    verifyUrl: "#",
+    verifyUrl: "",
   }
 ];
 
