@@ -4,6 +4,7 @@ import { Github, ExternalLink } from "lucide-react";
 export const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Certificates', href: '#certificates' },
   { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -85,6 +86,33 @@ export const projects = [
         icon: Github
       }
     ]
+  }
+];
+
+export const certificates = [
+  {
+    title: "Unity Certified Associate",
+    issuer: "Unity Technologies",
+    date: "2023",
+    imageUrl: "https://placehold.co/600x400/224714/FFF?text=Unity+Certified",
+    aiHint: "unity certificate",
+    verifyUrl: "#",
+  },
+  {
+    title: "n8n Workflow Automation",
+    issuer: "n8n",
+    date: "2024",
+    imageUrl: "https://placehold.co/600x400/6922A3/FFF?text=n8n+Certified",
+    aiHint: "automation certificate",
+    verifyUrl: "#",
+  },
+  {
+    title: "Advanced Python for Developers",
+    issuer: "Coursera",
+    date: "2023",
+    imageUrl: "https://placehold.co/600x400/3776AB/FFF?text=Python+Certified",
+    aiHint: "python certificate",
+    verifyUrl: "#",
   }
 ];
 
