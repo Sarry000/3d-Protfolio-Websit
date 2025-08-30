@@ -1,63 +1,47 @@
-
 "use client";
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Loader } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export function Hero() {
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
-  const [showSpline, setShowSpline] = useState(false);
-  const [isSplineLoading, setIsSplineLoading] = useState(true);
 
-  useEffect(() => {
-    // Delay showing the spline to ensure the main page content loads first
-    const showTimer = setTimeout(() => {
-      setShowSpline(true);
-    }, 500);
-
-    // Set a timeout for the spline to load
-    const loadTimer = setTimeout(() => {
-      if (!isSplineLoaded) {
-        // If spline hasn't loaded in 10 seconds, stop showing the loader
-        setIsSplineLoading(false);
-        console.warn("Spline loading timed out. Check the Spline URL or network connection.");
-      }
-    }, 10000); // 10 second timeout
-
-    return () => {
-      clearTimeout(showTimer);
-      clearTimeout(loadTimer);
-    };
-  }, [isSplineLoaded]);
-  
   const handleSplineLoad = () => {
     setIsSplineLoaded(true);
-    setIsSplineLoading(false);
   };
 
   return (
     <section id="home" className="relative h-screen w-full">
+      {/* Background elements */}
       <div className="absolute inset-0 bg-background">
-        {showSpline && (
-          <iframe
-            src='https://my.spline.design/robotfollowsanotherone-d859421f52d7a5c8a956163359d40398/'
-            frameBorder='0'
-            width='100%'
-            height='100%'
-            className='absolute inset-0 h-full w-full object-cover transition-opacity duration-1000'
-            style={{ opacity: isSplineLoaded ? 1 : 0 }}
-            onLoad={handleSplineLoad}
-          ></iframe>
-        )}
-        {isSplineLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-background">
+        {/* Loading Spinner */}
+        {!isSplineLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center bg-background z-10">
             <Loader className="h-12 w-12 animate-spin text-primary" />
           </div>
         )}
+        {/* Spline iFrame */}
+        <iframe
+          src='https://my.spline.design/robotfollowsanotherone-d859421f52d7a5c8a956163359d40398/'
+          frameBorder='0'
+          width='100%'
+          height='100%'
+          className={cn(
+            'absolute inset-0 h-full w-full object-cover transition-opacity duration-1000',
+            isSplineLoaded ? 'opacity-100' : 'opacity-0'
+          )}
+          onLoad={handleSplineLoad}
+          aria-hidden={!isSplineLoaded}
+          title="Interactive 3D Robot Scene"
+        ></iframe>
+        {/* Overlay */}
         <div className="absolute inset-0 bg-background/60" />
       </div>
+      
+      {/* Foreground Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center">
         <div className="flex-grow flex flex-col items-center justify-center px-4">
           <h1 className="text-7xl font-bold text-white md:text-8xl [text-shadow:0_0_20px_hsl(var(--primary))]">
@@ -70,8 +54,7 @@ export function Hero() {
             Passionate and detail-oriented final-year Computer Engineering student with a strong foundation in programming, game development, and database management. Proficient in Python, JavaScript, and Unity Engine.
           </p>
           <div className="mt-8 flex gap-4">
-            <Button asChild size="lg"
- className="glow-shadow hover:glow-shadow-lg">
+            <Button asChild size="lg" className="glow-shadow hover:glow-shadow-lg">
               <Link href="#projects">View My Work</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="glassmorphism glow-shadow hover:glow-shadow-lg hover:bg-primary/10">
