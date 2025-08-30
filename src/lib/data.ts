@@ -91,12 +91,12 @@ export const projects = [
 
 export const certificates = [
   {
-    title: "Unity Certified Associate",
-    issuer: "Unity Technologies",
-    date: "2023",
-    imageUrl: "https://placehold.co/600x400/224714/FFF?text=Unity+Certified",
-    aiHint: "unity certificate",
-    verifyUrl: "#",
+    title: " Generative AI Professional",
+    issuer: "Generative AI",
+    date: "2025",
+    imageUrl: "/Unity-Certificate-Preview.png",
+    aiHint: "Generative ai certificate",
+    verifyUrl: "/eCertificate.pdf",
   },
   {
     title: "n8n Workflow Automation",
