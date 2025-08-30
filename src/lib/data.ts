@@ -84,6 +84,11 @@ export const projects = [
         name: 'GitHub',
         href: '#',
         icon: Github
+      },
+      {
+        name :'vercel',
+        href:'https://studio-pi-liard.vercel.app/',
+        icon: ExternalLink
       }
     ]
   }
@@ -91,28 +96,28 @@ export const projects = [
 
 export const certificates = [
   {
-    title: " Generative AI Professional",
-    issuer: "Oracal Certification",
-    date: "2025",
+    title: "Generative AI Professional",
+    issuer: "Oracle",
+    date: "2024",
     imageUrl: "/Oci.png",
-    aiHint: "Generative ai certificate",
+    aiHint: "generative ai certificate",
     verifyUrl: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=572DD41D7A1BAB6923E1EC448F0103256AE426CF41E9DF3E15C919AA1B4155A5",
   },
   {
     title: "EA Gaming Certificate",
     issuer: "Forge",
-    date: "July 2025",
+    date: "July 2024",
     imageUrl: "/Game.png",
-    aiHint: "automation certificate",
+    aiHint: "gaming certificate",
     verifyUrl: "/Game.png",
   },
   {
     title: "Advanced Python for Developers",
     issuer: "Coursera",
     date: "2023",
-    imageUrl: "https://placehold.co/600x400/3776AB/FFF?text=Python+Certified",
+    imageUrl: "/Python-Certificate.png",
     aiHint: "python certificate",
-    verifyUrl: "",
+    verifyUrl: "#",
   }
 ];
 
