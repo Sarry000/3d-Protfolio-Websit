@@ -1,6 +1,7 @@
+
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
@@ -15,25 +16,32 @@ function HeroSpinner() {
 
 export function Hero() {
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
       {/* Spline 3D Scene */}
-      <div
-        className={cn(
-          "absolute inset-0 z-10 transition-opacity duration-1000",
-          isSplineLoaded ? 'opacity-100' : 'opacity-0'
-        )}
-      >
-        <iframe
-          src='https://my.spline.design/nexbotrobotcharacterconcept-dkmLeloEp6B1FHcSANkbHhrj/'
-          frameBorder='0'
-          width='100%'
-          height='100%'
-          onLoad={() => setIsSplineLoaded(true)}
-          title="3D Robot Animation"
-        ></iframe>
-      </div>
+      {isClient && (
+        <div
+          className={cn(
+            "absolute inset-0 z-10 transition-opacity duration-1000",
+            isSplineLoaded ? 'opacity-100' : 'opacity-0'
+          )}
+        >
+          <iframe
+            src='https://my.spline.design/nexbotrobotcharacterconcept-dkmLeloEp6B1FHcSANkbHhrj/'
+            frameBorder='0'
+            width='100%'
+            height='100%'
+            onLoad={() => setIsSplineLoaded(true)}
+            title="3D Robot Animation"
+          ></iframe>
+        </div>
+      )}
 
       {/* Loading Spinner Overlay */}
       {!isSplineLoaded && <HeroSpinner />}

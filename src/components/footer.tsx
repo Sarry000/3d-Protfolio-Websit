@@ -6,10 +6,10 @@ import { navLinks } from '@/lib/data';
 import { useEffect, useState } from 'react';
 
 export function Footer() {
-  const [year, setYear] = useState<number | null>(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setYear(new Date().getFullYear());
+    setIsClient(true);
   }, []);
 
   return (
@@ -19,8 +19,8 @@ export function Footer() {
           <Link href="/" className="text-xl font-bold text-glow">
             SarthakVerse
           </Link>
-          <p className="text-sm text-muted-foreground">
-            {year ? `© ${year} All rights reserved.` : '© All rights reserved.'}
+          <p className="text-sm text-muted-foreground h-5">
+            {isClient ? `© ${new Date().getFullYear()} All rights reserved.` : '© All rights reserved.'}
           </p>
         </div>
         <nav className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
