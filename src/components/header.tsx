@@ -15,17 +15,20 @@ import { Button } from './ui/button';
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className={cn("sticky top-0 z-50 w-full transition-all duration-300", scrolled ? "bg-background/50 backdrop-blur-lg" : "bg-transparent")}>
+    <header className={cn("sticky top-0 z-50 w-full transition-all duration-300", isClient && scrolled ? "bg-background/50 backdrop-blur-lg" : "bg-transparent")}>
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <Link href="/" className="text-2xl font-bold text-glow">
           Sarthak
