@@ -62,13 +62,14 @@ const sendEmailFlow = ai.defineFlow(
   async (input) => {
     const {output} = await emailPrompt(input);
     if (!output) {
-      throw new Error('Could not generate email content.');
+      console.error('Could not generate email content from AI.');
+      // Do not throw error to client, just log it.
+      return;
     }
     const {subject, body} = output;
     const recipient = 'sarthakbukane2710@gmail.com';
     
     if (!process.env.RESEND_API_KEY) {
-      // Fallback to console logging if Resend is not configured.
       console.log('--- RESEND_API_KEY not found. Logging email to console instead. ---');
       console.log(`To: ${recipient}`);
       console.log(`From: ${input.name} <${input.email}>`);
@@ -86,7 +87,7 @@ const sendEmailFlow = ai.defineFlow(
         from: 'SarthakVerse <onboarding@resend.dev>',
         to: [recipient],
         subject: subject,
-        html: body.replace(/\n/g, '<br>'), // Resend prefers HTML, so we replace newlines.
+        html: body.replace(/\\n/g, '<br>'), // Resend prefers HTML, so we replace newlines.
         reply_to: input.email,
       });
 
@@ -103,12 +104,11 @@ const sendEmailFlow = ai.defineFlow(
         return;
       }
 
-      console.log('Email sent successfully:', data);
+      console.log('Email sent successfully via Resend:', data);
 
     } catch (e) {
-      console.error('Failed to send email:', e);
-      // We are not throwing an error to the client anymore.
-      // throw new Error('Failed to send email.');
+      console.error('An unexpected error occurred while trying to send email:', e);
+      // We are not throwing an error to the client.
     }
   }
 );

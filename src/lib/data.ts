@@ -4,6 +4,7 @@ import { Github, ExternalLink } from "lucide-react";
 export const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Certificates', href: '#certificates' },
   { name: 'Skills', href: '#skills' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -83,8 +84,40 @@ export const projects = [
         name: 'GitHub',
         href: '#',
         icon: Github
+      },
+      {
+        name :'vercel',
+        href:'https://studio-pi-liard.vercel.app/',
+        icon: ExternalLink
       }
     ]
+  }
+];
+
+export const certificates = [
+  {
+    title: "Generative AI Professional",
+    issuer: "Oracle",
+    date: "2025",
+    imageUrl: "/Oci.png",
+    aiHint: "generative ai certificate",
+    verifyUrl: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=572DD41D7A1BAB6923E1EC448F0103256AE426CF41E9DF3E15C919AA1B4155A5",
+  },
+  {
+    title: "EA Gaming Certificate",
+    issuer: "Forge",
+    date: "July 2025",
+    imageUrl: "/Game.png",
+    aiHint: "gaming certificate",
+    verifyUrl: "/Game.png",
+  },
+  {
+    title: "Cyber Security",
+    issuer: "Infosys SpringBoard",
+    date: "April 2024",
+    imageUrl: "/Cyber.png",
+    aiHint: "Cyber Security certificate",
+    verifyUrl: "https://i.ibb.co/HL21jzQN/Screenshot-2025-08-30-134749.png",
   }
 ];
 
