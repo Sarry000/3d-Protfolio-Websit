@@ -107,9 +107,9 @@ export const certificates = [
     title: "EA Gaming Certificate",
     issuer: "Forge",
     date: "July 2025",
-    imageUrl: "/Game.png",
+    imageUrl: "https://i.ibb.co/bF4Vv3N/Game.png",
     aiHint: "gaming certificate",
-    verifyUrl: "/Game.png",
+    verifyUrl: "https://i.ibb.co/bF4Vv3N/Game.png",
   },
   {
     title: "Cyber Security",
