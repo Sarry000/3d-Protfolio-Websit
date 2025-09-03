@@ -1,27 +1,27 @@
-# SarthakVerse Portfolio - Personal Website
+# SarthakVerse - A Dynamic Personal Portfolio
 
-This is a personal portfolio website built with Next.js, showcasing my projects, skills, and providing a way to contact me. It was initially created in Firebase Studio and is designed to be a responsive and modern representation of my work.
+This is the repository for SarthakVerse, a futuristic and immersive personal portfolio website. Built with a modern tech stack including Next.js, React, and Tailwind CSS, this project showcases my skills, featured projects, and professional certifications. It was initially developed in Firebase Studio and features a sleek, responsive design with smooth animations and an integrated AI-powered contact form.
 
 ![Portfolio Demo](public/Portfoliooo.gif)
 
-To get started, take a look at `src/app/page.tsx`.
+To see the live version or get started with the code, take a look at `src/app/page.tsx`.
 
-## Technologies Used
+## Core Features
 
-*   **Next.js:** A React framework for server-side rendering and static site generation.
-*   **React:** A JavaScript library for building user interfaces.
-*   **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
-*   **Tailwind CSS:** A utility-first CSS framework for rapidly building custom designs.
-*   **Firebase:** Used for backend services (specifically for the contact form).
-*   **Google Gemini:** Integrated for AI functionality, powering the contact form's email generation.
-*   **Resend:** Used for sending emails from the contact form.
+*   **Interactive 3D Hero Section:** An engaging hero section featuring a 3D robot animation from Spline to immediately capture visitor attention.
+*   **Dynamic Sections:** Clearly defined sections for About Me, Featured Projects, Professional Certifications, and Technical Skills.
+*   **Smooth Animations:** Subtle, performant animations on scroll that enhance the user experience without compromising speed.
+*   **AI-Powered Contact Form:** A fully functional contact form that uses Google Gemini to intelligently process the input and sends the email via Resend, all orchestrated through a Genkit flow.
+*   **Responsive Design:** The layout is fully responsive, ensuring a seamless experience across desktops, tablets, and mobile devices.
 
-## Features
+## Technology Stack
 
-*   **Projects Section:** Displays a portfolio of my work.
-*   **Skills Section:** Highlights my technical skills.
-*   **Contact Section:** Provides a form for visitors to get in touch, which sends an email via Resend.
-*   **Responsive Design:** Adapts to different screen sizes.
+*   **Frontend:** [Next.js](https://nextjs.org/) (with App Router), [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/), [ShadCN/UI](https://ui.shadcn.com/) for components, `lucide-react` for icons.
+*   **Backend & AI:**
+    *   **[Genkit (Google AI)](https://firebase.google.com/docs/genkit):** Powers the AI functionality for processing contact form submissions.
+    *   **[Resend](https://resend.com/):** Handles the transactional email delivery for the contact form.
+*   **3D Animation:** [Spline](https://spline.design/) for the interactive 3D hero element.
 
 ## Running Locally
 
@@ -43,7 +43,7 @@ To run this project on your local machine, you'll need to have [Node.js](https:/
     GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
     RESEND_API_KEY=YOUR_RESEND_API_KEY_HERE
     ```
-    **Note:** For Resend to send emails, you must also verify a domain. The "from" email address in `src/ai/flows/send-email-flow.ts` must use that verified domain.
+    **Note:** For Resend to send emails, you must also verify a domain. The "from" email address in `src/ai/flows/send-email-flow.ts` must use that verified domain. For testing, Resend allows you to use `onboarding@resend.dev`.
 
 5.  **Run the Development Servers:** You need to run two servers simultaneously for the full application to work.
 
@@ -60,5 +60,3 @@ To run this project on your local machine, you'll need to have [Node.js](https:/
         This starts the server that handles the AI functionality (like sending emails).
 
 You should now have the full application running locally!
-
-
