@@ -34,7 +34,7 @@ export function About() {
             <div className="relative group">
               <div className="absolute -inset-1.5 bg-gradient-to-r from-accent to-primary rounded-full opacity-50 blur-xl group-hover:opacity-75 transition duration-500"></div>
               <Image
-                src="https://i.ibb.co/3k5g7b2/profile2.png"
+                src="/Profile2.png"
                 alt="Sarthak"
                 width={400}
                 height={400}
