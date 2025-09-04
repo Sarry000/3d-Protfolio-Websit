@@ -98,8 +98,8 @@ export const certificates = [
   {
     title: "Generative AI Professional",
     issuer: "Oracle",
-    date: "2025",
-    imageUrl: "https://i.ibb.co/7C6T94n/Oci.png",
+    date: "AUG 2025",
+    imageUrl: "/Oci.png",
     aiHint: "generative ai certificate",
     verifyUrl: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=572DD41D7A1BAB6923E1EC448F0103256AE426CF41E9DF3E15C919AA1B4155A5",
   },
@@ -107,7 +107,7 @@ export const certificates = [
     title: "EA Gaming Certificate",
     issuer: "Forge",
     date: "July 2024",
-    imageUrl: "https://i.ibb.co/bF4Vv3N/Game.png",
+    imageUrl: "/Game.png",
     aiHint: "gaming certificate",
     verifyUrl: "https://ibb.co/QF1T2p1",
   },
@@ -123,7 +123,7 @@ export const certificates = [
     title: "Oci Generative Foundation Associate",
     issuer: "Oracal",
     date: "Sept 2025",
-    imageUrl: "https://i.ibb.co/k3F7k5f/Oci2.png",
+    imageUrl: "/Oci2.png",
     aiHint: "Generative ai",
     verifyUrl: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=6CA743D8659B3BEF6CF93DDD0BD0C033E913796F6F74D70CF7F40C331745335D",
   }
