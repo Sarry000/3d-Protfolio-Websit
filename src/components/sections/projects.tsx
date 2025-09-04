@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.2 });
@@ -65,6 +66,11 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
 
 export function Projects() {
   const { ref, inView } = useInView<HTMLDivElement>();
+  const [visibleProjects, setVisibleProjects] = useState(3);
+
+  const showMoreProjects = () => {
+    setVisibleProjects(prev => prev + 3);
+  };
 
   return (
     <section id="projects" ref={ref} className="py-24 sm:py-32">
@@ -78,10 +84,17 @@ export function Projects() {
           </p>
         </div>
         <div className="space-y-24">
-          {projects.map((project, index) => (
+          {projects.slice(0, visibleProjects).map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
+        {visibleProjects < projects.length && (
+          <div className="mt-12 text-center">
+            <Button onClick={showMoreProjects} size="lg" className="glow-shadow hover:glow-shadow-lg">
+              Show More
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
