@@ -106,7 +106,7 @@ export const certificates = [
   {
     title: "EA Gaming Certificate",
     issuer: "Forge",
-    date: "July 2024",
+    date: "July 2025",
     imageUrl: "/Game.png",
     aiHint: "gaming certificate",
     verifyUrl: "https://ibb.co/QF1T2p1",
