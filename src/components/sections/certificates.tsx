@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -15,6 +16,10 @@ export function Certificates() {
 
   const showMoreCertificates = () => {
     setVisibleCertificates(prev => prev + 3);
+  };
+
+  const showLessCertificates = () => {
+    setVisibleCertificates(3);
   };
 
   return (
@@ -60,13 +65,18 @@ export function Certificates() {
             </Card>
           ))}
         </div>
-        {visibleCertificates < certificates.length && (
-            <div className="mt-12 text-center">
-                <Button onClick={showMoreCertificates} size="lg" className="glow-shadow hover:glow-shadow-lg">
-                    Show More
-                </Button>
-            </div>
-        )}
+        <div className="mt-12 flex justify-center gap-4">
+          {visibleCertificates < certificates.length && (
+              <Button onClick={showMoreCertificates} size="lg" className="glow-shadow hover:glow-shadow-lg">
+                  Show More
+              </Button>
+          )}
+          {visibleCertificates > 3 && (
+            <Button onClick={showLessCertificates} size="lg" variant="outline" className="glassmorphism glow-shadow hover:glow-shadow-lg hover:bg-primary/10">
+              Show Less
+            </Button>
+          )}
+        </div>
       </div>
     </section>
   );

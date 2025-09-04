@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -72,6 +73,10 @@ export function Projects() {
     setVisibleProjects(prev => prev + 3);
   };
 
+  const showLessProjects = () => {
+    setVisibleProjects(3);
+  };
+
   return (
     <section id="projects" ref={ref} className="py-24 sm:py-32">
       <div className="container mx-auto space-y-16 px-4 md:px-6">
@@ -88,13 +93,18 @@ export function Projects() {
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
-        {visibleProjects < projects.length && (
-          <div className="mt-12 text-center">
+        <div className="mt-12 flex justify-center gap-4">
+          {visibleProjects < projects.length && (
             <Button onClick={showMoreProjects} size="lg" className="glow-shadow hover:glow-shadow-lg">
               Show More
             </Button>
-          </div>
-        )}
+          )}
+          {visibleProjects > 3 && (
+            <Button onClick={showLessProjects} size="lg" variant="outline" className="glassmorphism glow-shadow hover:glow-shadow-lg hover:bg-primary/10">
+              Show Less
+            </Button>
+          )}
+        </div>
       </div>
     </section>
   );
