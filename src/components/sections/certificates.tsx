@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -7,9 +8,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { certificates } from "@/lib/data";
 import { ExternalLink } from "lucide-react";
+import { useState } from "react";
 
 export function Certificates() {
   const { ref, inView } = useInView<HTMLElement>({ threshold: 0.1 });
+  const [visibleCertificates, setVisibleCertificates] = useState(3);
+
+  const showMoreCertificates = () => {
+    setVisibleCertificates(prev => prev + 3);
+  };
+
+  const showLessCertificates = () => {
+    setVisibleCertificates(3);
+  };
 
   return (
     <section id="certificates" ref={ref} className="py-24 sm:py-32 bg-primary/5">
@@ -23,7 +34,7 @@ export function Certificates() {
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {certificates.map((cert, index) => (
+          {certificates.slice(0, visibleCertificates).map((cert, index) => (
             <Card
               key={index}
               data-in-view={inView}
@@ -53,6 +64,18 @@ export function Certificates() {
               </CardFooter>
             </Card>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center gap-4">
+          {visibleCertificates < certificates.length && (
+              <Button onClick={showMoreCertificates} size="lg" className="glow-shadow hover:glow-shadow-lg">
+                  Show More
+              </Button>
+          )}
+          {visibleCertificates > 3 && (
+            <Button onClick={showLessCertificates} size="lg" variant="outline" className="glassmorphism glow-shadow hover:glow-shadow-lg hover:bg-primary/10">
+              Show Less
+            </Button>
+          )}
         </div>
       </div>
     </section>

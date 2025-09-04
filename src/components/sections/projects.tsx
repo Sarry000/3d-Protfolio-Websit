@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -7,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 function ProjectCard({ project, index }: { project: typeof projects[0], index: number }) {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.2 });
@@ -65,6 +67,15 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
 
 export function Projects() {
   const { ref, inView } = useInView<HTMLDivElement>();
+  const [visibleProjects, setVisibleProjects] = useState(3);
+
+  const showMoreProjects = () => {
+    setVisibleProjects(prev => prev + 3);
+  };
+
+  const showLessProjects = () => {
+    setVisibleProjects(3);
+  };
 
   return (
     <section id="projects" ref={ref} className="py-24 sm:py-32">
@@ -78,9 +89,21 @@ export function Projects() {
           </p>
         </div>
         <div className="space-y-24">
-          {projects.map((project, index) => (
+          {projects.slice(0, visibleProjects).map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
+        </div>
+        <div className="mt-12 flex justify-center gap-4">
+          {visibleProjects < projects.length && (
+            <Button onClick={showMoreProjects} size="lg" className="glow-shadow hover:glow-shadow-lg">
+              Show More
+            </Button>
+          )}
+          {visibleProjects > 3 && (
+            <Button onClick={showLessProjects} size="lg" variant="outline" className="glassmorphism glow-shadow hover:glow-shadow-lg hover:bg-primary/10">
+              Show Less
+            </Button>
+          )}
         </div>
       </div>
     </section>
