@@ -99,7 +99,7 @@ export const certificates = [
     title: "Generative AI Professional",
     issuer: "Oracle",
     date: "2025",
-    imageUrl: "/Oci.png",
+    imageUrl: "https://i.ibb.co/gPSr3gR/Oci.png",
     aiHint: "generative ai certificate",
     verifyUrl: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=572DD41D7A1BAB6923E1EC448F0103256AE426CF41E9DF3E15C919AA1B4155A5",
   },
@@ -107,7 +107,7 @@ export const certificates = [
     title: "EA Gaming Certificate",
     issuer: "Forge",
     date: "July 2025",
-    imageUrl: "/Game.png",
+    imageUrl: "https://i.ibb.co/bF4Vv3N/Game.png",
     aiHint: "gaming certificate",
     verifyUrl: "https://i.ibb.co/bF4Vv3N/Game.png",
   },
@@ -115,9 +115,17 @@ export const certificates = [
     title: "Cyber Security",
     issuer: "Infosys SpringBoard",
     date: "April 2024",
-    imageUrl: "/Cyber.png",
+    imageUrl: "https://i.ibb.co/HL21jzQN/Screenshot-2025-08-30-134749.png",
     aiHint: "Cyber Security certificate",
     verifyUrl: "https://i.ibb.co/HL21jzQN/Screenshot-2025-08-30-134749.png",
+  },
+  {
+    title: "Oci Generative Foundation Associate",
+    issuer: "Oracal",
+    date: "Sept 2025",
+    imageUrl: "https://i.ibb.co/tBS5T1H/Oci2.png",
+    aiHint: "Generative ai",
+    verifyUrl: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=6CA743D8659B3BEF6CF93DDD0BD0C033E913796F6F74D70CF7F40C331745335D",
   }
 ];
 
